@@ -4,6 +4,7 @@
   themes: light --default;
 }
 @custom-variant dark (&:is(.dark *));
+@plugin "@tailwindcss/typography";
 
 .stat {
   box-shadow: 0 3px rgb(0, 153, 0);

@@ -9,6 +9,7 @@ import news from '@/data/news';
 import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';
 import NewsCard from './NewsCard';
+import { Link } from 'react-router-dom';
 
 const NewsCarousel = () => {
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
@@ -28,9 +29,11 @@ const NewsCarousel = () => {
               key={news.id}
               className="pl-1 md:basis-1/2 lg:basis-1/3"
             >
-              <div className="p-1">
-                <NewsCard news={news} />
-              </div>
+              <Link to={`/news/${news.id}`}>
+                <div className="p-1">
+                  <NewsCard news={news} />
+                </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

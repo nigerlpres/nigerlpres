@@ -32,6 +32,7 @@ const schema = z.object({
 type ComplaintFormData = z.infer<typeof schema>;
 
 const ComplaintPage = () => {
+  const date = new Date();
   const {
     register,
     formState: { errors },
@@ -82,7 +83,16 @@ const ComplaintPage = () => {
         className="shadow border rounded-2xl p-3 max-w-lg w-full"
         noValidate
         onSubmit={handleSubmit((data) => {
-          console.log(data);
+          const loggedData = {
+            id: 0,
+            ...data,
+            publishDate: date.toLocaleDateString(navigator.language, {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            }),
+          };
+          console.log(loggedData);
           toast('Your complaint has been submitted.');
           reset();
         })}

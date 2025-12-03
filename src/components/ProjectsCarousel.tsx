@@ -21,14 +21,14 @@ const ProjectsCarousel = ({ orientation = 'horizontal' }: Props) => {
     <div className="relative overflow-hidden">
       <Carousel
         orientation={orientation}
-        className="w-full max-w-[900px] mx-auto "
+        className="w-full max-w-[900px] mx-auto"
         plugins={[plugin.current]}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent
           className={`-ml-1 ${
-            orientation === 'vertical' ? 'h-[400px]' : 'h-auto'
+            orientation === 'vertical' ? 'h-[420px]' : 'h-auto'
           }`}
         >
           {projects.map((project) => (
