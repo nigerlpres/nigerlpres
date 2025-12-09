@@ -1,5 +1,5 @@
 import NewsCarousel from '@/components/NewsCarousel';
-import axios, { AxiosError } from 'axios';
+import axios, { AxiosError, CanceledError } from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import type { News } from './Newspage';
@@ -8,20 +8,26 @@ const NewsDetailsPage = () => {
   const { id } = useParams();
   const [news, setNews] = useState<News | null>();
   const [error, setError] = useState('');
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
     axios
       .get<{ data: News }>(
-        `https://lpress-backend.onrender.com/api/v1/news/${id}`
+        `https://lpress-backend.onrender.com/api/v1/news/${id}`,
+        { signal: controller.signal }
       )
       .then((res) => {
         setNews(res.data.data);
         setLoading(false);
       })
       .catch((err: AxiosError) => {
+        if (err instanceof CanceledError) return;
+        setError(err.message);
         setError(err.message);
         setLoading(false);
       });
+    return () => controller.abort();
   }, [id]);
 
   if (isLoading) {

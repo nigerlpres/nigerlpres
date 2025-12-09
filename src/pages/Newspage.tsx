@@ -1,11 +1,10 @@
 import NewsCard from '@/components/NewsCard';
-// import news from '@/data/news';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios, { AxiosError } from 'axios';
+import axios, { AxiosError, CanceledError } from 'axios';
 
 export interface News {
-  id: number;
+  id: string;
   published_at: string;
   title: string;
   details: string;
@@ -25,21 +24,28 @@ const Newspage = () => {
   const [error, setError] = useState('');
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
+    const controller = new AbortController();
     axios
-      .get<FetchResponse>('https://lpress-backend.onrender.com/api/v1/news')
+      .get<FetchResponse>('https://lpress-backend.onrender.com/api/v1/news', {
+        signal: controller.signal,
+      })
       .then((res) => {
         setNews(res.data.data);
         setLoading(false);
       })
       .catch((err: AxiosError) => {
+        if (err instanceof CanceledError) return;
+        setError(err.message);
         setError(err.message);
         setLoading(false);
       });
+
+    return () => controller.abort();
   }, []);
 
   if (isLoading)
     return (
-      <div className="max-w-[1050px] mx-auto px-4 py-12">
+      <div className="max-w-[1140px] mx-auto px-4 py-12">
         <h1 className="text-3xl text-green-900 font-semibold mb-3 lg:text-4xl">
           Latest News from L-PRES
         </h1>

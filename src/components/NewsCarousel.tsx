@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import axios, { AxiosError } from 'axios';
+import axios, { AxiosError, CanceledError } from 'axios';
 import Autoplay from 'embla-carousel-autoplay';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -20,16 +20,23 @@ const NewsCarousel = () => {
   const [error, setError] = useState('');
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
+    const controller = new AbortController();
     axios
-      .get<FetchResponse>('https://lpress-backend.onrender.com/api/v1/news')
+      .get<FetchResponse>('https://lpress-backend.onrender.com/api/v1/news', {
+        signal: controller.signal,
+      })
       .then((res) => {
         setNews(res.data.data);
         setLoading(false);
       })
       .catch((err: AxiosError) => {
+        if (err instanceof CanceledError) return;
+        setError(err.message);
         setError(err.message);
         setLoading(false);
       });
+
+    return () => controller.abort();
   }, []);
 
   if (error || !news) return null;
