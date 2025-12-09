@@ -1,16 +1,25 @@
+import { stripHtml } from '@/lib/utils';
+import type { News } from '@/pages/Newspage';
 import { BsWindowSidebar } from 'react-icons/bs';
 import TextSummarizer from './TextSummarizer';
-import type { News } from '@/data/news';
+import placeholder from '../assets/placeholder-news.jpg';
 
 interface Props {
   news: News;
 }
 
 const NewsCard = ({ news }: Props) => {
+  const plainTextDetails = stripHtml(news.details);
+  const imageUrl =
+    news.images && news.images.length > 0 ? news.images[0] : placeholder;
   return (
-    <div className="p-2 rounded-2xl shadow-md border hover:transform-[scale(1.05)] transition-transform cursor-pointer">
+    <div className="p-2 w-full rounded-2xl shadow-md border hover:transform-[scale(1.05)] transition-transform cursor-pointer">
       <div className="rounded-2xl overflow-hidden">
-        <img className="w-full" src={news.image} alt={news.title} />
+        <img
+          className="w-full h-50 object-cover"
+          src={imageUrl}
+          alt={news.title}
+        />
       </div>
       <div className="py-2">
         <h2 className="font-semibold text-gray-600">
@@ -18,10 +27,14 @@ const NewsCard = ({ news }: Props) => {
         </h2>
         <div className="mt-2">
           <span className="inline-block py-[2px] px-3 mb-2 rounded-sm text-green-950 bg-gray-50 border shadow font-semibold">
-            {news.publishDate}
+            {new Date(news.published_at).toLocaleDateString('en-us', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            })}
           </span>
           <div className="text-gray-600 mb-2">
-            <TextSummarizer limit={75}>{news.details}</TextSummarizer>
+            <TextSummarizer limit={75}>{plainTextDetails}</TextSummarizer>
           </div>
           <div className="text-green-800 flex items-center mt-5">
             <span className="inline-block mr-2">
