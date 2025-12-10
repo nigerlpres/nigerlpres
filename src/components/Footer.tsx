@@ -1,3 +1,5 @@
+import axios from 'axios';
+import { useRef, useState } from 'react';
 import {
   FaFacebookSquare,
   FaInstagram,
@@ -7,8 +9,11 @@ import {
 import { FaLocationDot, FaSquareXTwitter } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { toast } from 'sonner';
 
 const Footer = () => {
+  const emailRef = useRef<HTMLInputElement>(null);
+  const [subscribing, setSubscribing] = useState(false);
   const date = new Date();
   const contactInfo = [
     {
@@ -25,14 +30,14 @@ const Footer = () => {
     {
       icon: <FaPhone />,
       type: 'link',
-      label: 'Telephone',
-      value: 'tel:+11122233344455',
+      label: 'GRM Hotline',
+      value: 'tel:+2347078014165',
     },
     {
       icon: <MdEmail />,
       type: 'link',
       label: 'Mail Us',
-      value: 'mailto:niger@lpresnigeria.gov.ng',
+      value: 'mailto:nigerlpres.grm@gmail.com',
     },
   ];
 
@@ -85,20 +90,51 @@ const Footer = () => {
               </Link>
             ))}
           </nav>
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setSubscribing(true);
+              if (emailRef.current) {
+                axios
+                  .post(
+                    'https://lpress-backend.onrender.com/api/v1/subscribers/subscribe',
+                    { email: emailRef.current.value }
+                  )
+                  .then(() => {
+                    setSubscribing(false);
+                    toast('Thanks for subscribing!');
+                  })
+                  .catch(() => {
+                    setSubscribing(false);
+                    toast("Oops! We couldn't subscribe you. Please try again.");
+                  });
+
+                emailRef.current.value = '';
+              }
+            }}
+          >
             <h6 className="footer-title">Newsletter</h6>
             <fieldset className="w-80">
               <label className="mb-2 inline-block">
-                Enter your email address
+                Subscribe to our Newsletter
               </label>
               <div className="join">
                 <input
-                  type="text"
-                  placeholder="username@site.com"
+                  ref={emailRef}
+                  type="email"
+                  placeholder="johnsmith@gmail.com"
                   className="input input-bordered join-item"
+                  required
+                  max={40}
                 />
-                <button className="btn btn-success join-item bg-green-700 border-0 text-white shadow-none hover:bg-green-900">
-                  Subscribe
+                <button
+                  type="submit"
+                  disabled={subscribing}
+                  className={`btn btn-success join-item bg-green-700 ${
+                    subscribing && 'bg-green-700/50'
+                  } border-0 text-white shadow-none hover:bg-green-900`}
+                >
+                  {subscribing ? 'Subscribing...' : 'Subscribe'}
                 </button>
               </div>
             </fieldset>
