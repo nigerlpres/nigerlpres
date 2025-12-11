@@ -14,7 +14,7 @@ const NewsDetailsPage = () => {
     setLoading(true);
     axios
       .get<{ data: News }>(
-        `https://lpress-backend.onrender.com/api/v1/news/${id}`,
+        `https://lpress-backend-y1jn.onrender.com/api/v1/news/${id}`,
         { signal: controller.signal }
       )
       .then((res) => {

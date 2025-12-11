@@ -99,7 +99,7 @@ const ComplaintPage = () => {
             };
             axios
               .post(
-                'https://lpress-backend.onrender.com/api/v1/complaints',
+                'https://lpress-backend-y1jn.onrender.com/api/v1/complaints',
                 loggedData
               )
               .then(() => {

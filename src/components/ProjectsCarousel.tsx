@@ -27,7 +27,7 @@ const ProjectsCarousel = ({ orientation = 'horizontal' }: Props) => {
 
     axios
       .get<FetchProjectsResponse>(
-        'https://lpress-backend.onrender.com/api/v1/projects',
+        'https://lpress-backend-y1jn.onrender.com/api/v1/projects',
         { signal: controller.signal }
       )
       .then((res) => {

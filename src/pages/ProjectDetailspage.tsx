@@ -18,7 +18,7 @@ const ProjectDetailsPage = () => {
     setLoading(true);
     axios
       .get<{ data: Project }>(
-        `https://lpress-backend.onrender.com/api/v1/projects/${id}`,
+        `https://lpress-backend-y1jn.onrender.com/api/v1/projects/${id}`,
         { signal: controller.signal }
       )
       .then((res) => {

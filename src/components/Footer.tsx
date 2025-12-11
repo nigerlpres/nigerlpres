@@ -97,7 +97,7 @@ const Footer = () => {
               if (emailRef.current) {
                 axios
                   .post(
-                    'https://lpress-backend.onrender.com/api/v1/subscribers/subscribe',
+                    'https://lpress-backend-y1jn.onrender.com/api/v1/subscribers/subscribe',
                     { email: emailRef.current.value }
                   )
                   .then(() => {

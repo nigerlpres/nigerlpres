@@ -26,9 +26,12 @@ const Newspage = () => {
   useEffect(() => {
     const controller = new AbortController();
     axios
-      .get<FetchResponse>('https://lpress-backend.onrender.com/api/v1/news', {
-        signal: controller.signal,
-      })
+      .get<FetchResponse>(
+        'https://lpress-backend-y1jn.onrender.com/api/v1/news',
+        {
+          signal: controller.signal,
+        }
+      )
       .then((res) => {
         setNews(res.data.data);
         setLoading(false);
