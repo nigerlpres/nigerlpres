@@ -75,28 +75,6 @@ const Newspage = () => {
     );
   }
 
-  if (news.length === 0) {
-    return (
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
-        <h1 className="text-3xl text-green-900 font-semibold mb-3 lg:text-4xl">
-          Latest News from L-PRES
-        </h1>
-        <p className="text-gray-600">
-          Stay abreast of the Livestock Productivity and Resilience Enhancement
-          Project (L-PRES) through our News and Updates section. Keep informed
-          about the project's latest milestones, achievements, and insights,
-          offering you a deeper understanding of the L-PRES initiative.
-        </p>
-
-        <div className="h-64 rounded-2xl border-dashed border-2 mt-10 text-2xl text-gray-600 flex justify-center items-center border-gray-300">
-          <p className="tracking-wider font-extralight">
-            Published News articles appear here...
-          </p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="max-w-[1140px] mx-auto px-4 py-12">
       <h1 className="text-3xl text-green-900 font-semibold mb-3 lg:text-4xl">
