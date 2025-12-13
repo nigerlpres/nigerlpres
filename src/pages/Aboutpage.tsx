@@ -66,7 +66,7 @@ const Aboutpage = () => {
 
   return (
     <div>
-      <div className="max-w-[1140px] mx-auto px-4 py-12 grid items-center gap-10 lg:grid-cols-2">
+      <div className="max-w-285 mx-auto px-4 py-12 grid items-center gap-10 lg:grid-cols-2">
         <div className="rounded-lg overflow-hidden">
           <img src={lpresLogo} className="shadow-2xl w-full object-cover" />
         </div>
@@ -95,7 +95,7 @@ const Aboutpage = () => {
         </div>
       </div>
       <div className="bg-gray-50 rounded-[30px] rounded-br-[110px]">
-        <div className="max-w-[1140px] mx-auto px-4 grid py-24 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+        <div className="max-w-285 mx-auto px-4 grid py-24 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
           {companyPrinciples.map((principle) => (
             <div
               key={principle.title}
@@ -119,7 +119,7 @@ const Aboutpage = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-[900px] mx-auto py-14 px-4">
+      <div className="max-w-225 mx-auto py-14 px-4">
         <h2 className="text-3xl font-semibold text-green-900">
           Projects Components
         </h2>

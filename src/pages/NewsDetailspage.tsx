@@ -32,7 +32,7 @@ const NewsDetailsPage = () => {
 
   if (isLoading) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 pb-28 lg:pb-12">
+      <div className="max-w-285 mx-auto px-4 pb-28 lg:pb-12">
         <div className="flex items-center justify-center h-64">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-700"></div>
         </div>
@@ -42,7 +42,7 @@ const NewsDetailsPage = () => {
 
   if (error || !news) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 pb-28 lg:pb-12">
+      <div className="max-w-285 mx-auto px-4 pb-28 lg:pb-12">
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
           {error || 'News not found'}
         </div>
@@ -52,9 +52,9 @@ const NewsDetailsPage = () => {
   const date = new Date(news.published_at || news.created_at);
   return (
     <div>
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
+      <div className="max-w-285 mx-auto px-4 py-12">
         <div className="mb-5">
-          <h1 className="text-xl font-semibold mb-1 text-green-900 lg:text-2xl">
+          <h1 className="text-xl font-semibold mb-1 text-green-900 lg:text-2xl uppercase">
             {news.title}
           </h1>
           <div className="text-gray-500 tracking-wider mb-3 flex flex-col lg:flex-row lg:justify-between">
@@ -97,7 +97,7 @@ const NewsDetailsPage = () => {
             </div>
             <div className="">
               <h2 className="text-green-900 font-semibold text-[27px] text-3xl mb-5">
-                Explore other News
+                Explore Other News
               </h2>
               <NewsCarousel />
             </div>

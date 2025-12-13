@@ -47,7 +47,7 @@ const Projectspage = () => {
 
   if (isLoading)
     return (
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
+      <div className="max-w-285 mx-auto px-4 py-12">
         <div>
           <h1 className="text-3xl md:text-4xl mb-2 font-semibold text-green-900">
             we finish what we start
@@ -70,7 +70,7 @@ const Projectspage = () => {
 
   if (error) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 pb-28 lg:pb-12 h-64 p-4">
+      <div className="max-w-285 mx-auto px-4 pb-28 lg:pb-12 h-64 p-4">
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
           {error}
         </div>
@@ -80,7 +80,7 @@ const Projectspage = () => {
 
   if (projects.length === 0) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
+      <div className="max-w-285 mx-auto px-4 py-12">
         <div>
           <h1 className="text-3xl md:text-4xl mb-2 font-semibold text-green-900">
             we finish what we start
@@ -104,7 +104,7 @@ const Projectspage = () => {
   }
 
   return (
-    <div className="max-w-[1140px] mx-auto px-4 py-12">
+    <div className="max-w-285 mx-auto px-4 py-12">
       <div>
         <h1 className="text-3xl md:text-4xl mb-2 font-semibold text-green-900">
           we finish what we start

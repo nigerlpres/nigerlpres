@@ -29,12 +29,12 @@ const FrameworkSection = () => {
   ];
 
   return (
-    <div className="px-4 py-[50px] text-center">
+    <div className="px-4 py-12.5 text-center">
       <h2 className="tracking-[5px] text-3xl text-gray-600 font-light mb-5">
         FRAMEWORK
       </h2>
-      <div className="flex flex-col gap-10 max-w-[1024px] mx-auto relative md:flex-row">
-        <div className="absolute right-0 left-0 top-1/2 w-auto h-[5px] bg-gray-200 hidden md:block"></div>
+      <div className="flex flex-col gap-10 max-w-5xl mx-auto relative md:flex-row">
+        <div className="absolute right-0 left-0 top-1/2 w-auto h-1.25 bg-gray-200 hidden md:block"></div>
         {statistics.map((stat) => (
           <div
             key={stat.name}
@@ -42,7 +42,7 @@ const FrameworkSection = () => {
             data-aos="fade-up"
             data-aos-delay={stat.delay}
           >
-            <span className="w-[50px] h-[50px] mb-5 bg-green-600 justify-self-center text-white text-3xl inline-flex justify-center items-center rounded-full">
+            <span className="w-12.5 h-12.5 mb-5 bg-green-600 justify-self-center text-white text-3xl inline-flex justify-center items-center rounded-full">
               {stat.icon}
             </span>
             <p className="text-4xl font-semibold text-green-700 mb-2">
@@ -53,8 +53,8 @@ const FrameworkSection = () => {
         ))}
       </div>
 
-      <div className="max-w-[1024px] mx-auto">
-        <div className="py-[70px] grid gap-10 text-left md:grid-cols-[300px_1fr]">
+      <div className="max-w-5xl mx-auto">
+        <div className="py-17.5 grid gap-10 text-left md:grid-cols-[300px_1fr]">
           <h2 className="text-4xl text-green-800 font-semibold">
             We are Transforming Livestock Farming In Africa
           </h2>
@@ -87,7 +87,7 @@ const FrameworkSection = () => {
           </div>
         </div>
         <img
-          className="w-full h-[250px] rounded-2xl object-cover"
+          className="w-full h-62.5 rounded-2xl object-cover"
           src={farmRoosters}
           alt="roosters"
           loading="lazy"
@@ -95,7 +95,7 @@ const FrameworkSection = () => {
       </div>
 
       <div className="pt-14 pb-10" data-aos="fade-up" data-aos-duration="400">
-        <div className="max-w-[650px] mx-auto p-3 bg-white border border-gray-200 rounded-lg shadow-sm text-left">
+        <div className="max-w-162.5 mx-auto p-3 bg-white border border-gray-200 rounded-lg shadow-sm text-left">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-800 capitalize">
             we finish what we start
           </h5>

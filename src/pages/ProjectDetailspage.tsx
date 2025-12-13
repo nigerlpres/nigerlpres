@@ -36,7 +36,7 @@ const ProjectDetailsPage = () => {
 
   if (isLoading) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 pb-28 lg:pb-12">
+      <div className="max-w-285 mx-auto px-4 pb-28 lg:pb-12">
         <div className="flex items-center justify-center h-64">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-700"></div>
         </div>
@@ -46,7 +46,7 @@ const ProjectDetailsPage = () => {
 
   if (error || !project) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 pb-28 lg:pb-12">
+      <div className="max-w-285 mx-auto px-4 pb-28 lg:pb-12">
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
           {error || 'Project not found'}
         </div>
@@ -55,11 +55,11 @@ const ProjectDetailsPage = () => {
   }
 
   return (
-    <div className="max-w-[1024px] mx-auto px-4 py-12">
+    <div className="max-w-5xl mx-auto px-4 py-12">
       <div className="mb-5">
         <div className="flex mb-4 flex-col lg:flex-row lg:justify-between">
           <div className="max-w-lg">
-            <h1 className="text-2xl font-semibold text-green-900 lg:text-2xl mb-1">
+            <h1 className="text-2xl font-semibold text-green-900 lg:text-2xl mb-1 uppercase">
               {project.title}
             </h1>
             <p className="text-gray-600">Project overview and progress</p>
@@ -113,18 +113,11 @@ const ProjectDetailsPage = () => {
                   />
                 </div>
               ))}
-              <div>
-                <img
-                  className="h-auto max-w-full rounded-lg"
-                  src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-                  alt=""
-                />
-              </div>
             </div>
           </div>
           <div className="mt-8 max-w-sm mx-auto">
             <h2 className="text-green-900 font-semibold text-[27px] text-3xl mb-3">
-              Explore other projects
+              Explore Other Projects
             </h2>
             <ProjectsCarousel orientation="vertical" />
           </div>

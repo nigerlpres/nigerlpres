@@ -14,7 +14,7 @@ const ValueChainsSection = () => {
       </div>
 
       <div className="bg-gray-50 py-10 px-4 rounded-[60px]">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-225 mx-auto">
           <h2 className="text-3xl font-semibold text-green-900 lg:text-4xl">
             Welcome to Livestock Productivity & Resilience Project (L-PRES)
           </h2>
@@ -41,13 +41,13 @@ const ValueChainsSection = () => {
           <img className="w-[27%] sm:w-[16%]" src={fmafs} alt="logo" />
           <img
             src={nigerStateSeal}
-            className="w-[50px] h-[50px] rounded-full object-cover sm:w-[100px] sm:h-[100px]"
+            className="w-12.5 h-12.5 rounded-full object-cover sm:w-25 sm:h-25"
             alt=""
           />
           <img className="w-[27%] sm:w-[16%]" src={worldBank} alt="logo" />
         </div>
       </div>
-      <div className="py-20 px-4 text-left text-gray-600 grid items-center gap-10 max-w-[1024px] mx-auto lg:grid-cols-2">
+      <div className="py-20 px-4 text-left text-gray-600 grid items-center gap-10 max-w-5xl mx-auto lg:grid-cols-2">
         <div className="text-[16px]">
           <h2 className="font-semibold text-3xl text-green-800 mb-4 lg:text-5xl">
             Selected Value Chains

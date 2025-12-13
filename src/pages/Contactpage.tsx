@@ -11,7 +11,7 @@ const Contactpage = () => {
   ];
 
   return (
-    <div className="max-w-[1024px] mx-auto px-4 py-12 text-gray-600">
+    <div className="max-w-5xl mx-auto px-4 py-12 text-gray-600">
       <div>
         <h1 className="text-3xl text-green-900 mb-3 font-semibold lg:text-4xl">
           Get in touch with us

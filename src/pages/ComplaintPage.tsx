@@ -71,15 +71,15 @@ const ComplaintPage = () => {
   ];
 
   return (
-    <div className="px-4 max-w-[1024px] mx-auto">
+    <div className="px-4 max-w-5xl mx-auto">
       {error && (
-        <div className="max-w-[1140px] mx-auto px-4 mb-5 p-4">
+        <div className="max-w-285 mx-auto px-4 mb-5 p-4">
           <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
             {error}
           </div>
         </div>
       )}
-      <div className="py-10 grid gap-10 max-w-[1024px] mx-auto md:grid-cols-2">
+      <div className="py-10 grid gap-10 max-w-5xl mx-auto md:grid-cols-2">
         <div>
           <h1 className="text-2xl font-semibold mb-5 md:text-4xl">
             Lay a Complaint

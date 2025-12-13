@@ -34,7 +34,7 @@ const MileStones = () => {
   ];
 
   return (
-    <div className="pt-10 pb-3 max-w-[1024px] mx-auto">
+    <div className="pt-10 pb-3 max-w-5xl mx-auto">
       <h2 className="text-2xl font-semibold text-green-900 md:text-3xl lg:4xl">
         Our Milestones
       </h2>

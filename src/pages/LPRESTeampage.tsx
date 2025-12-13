@@ -94,7 +94,7 @@ const LPRESTeampage = () => {
   ];
 
   return (
-    <div className="px-4 py-10 max-w-[900px] mx-auto">
+    <div className="px-4 py-10 max-w-225 mx-auto">
       <h1 className="font-semibold text-2xl text-green-900 mb-3 md:text-3xl">
         About the L-PRES team
       </h1>
@@ -113,12 +113,12 @@ const LPRESTeampage = () => {
           >
             <img
               loading="lazy"
-              className="w-full h-[300px] object-cover object-center"
+              className="w-full h-75 object-cover object-center"
               src={member.image}
               alt={member.name}
             />
-            <div className="absolute p-2 flex flex-col items-center rounded-3xl bottom-2 left-2 right-2 bg-gradient-to-r from-white/80 to-white/20 backdrop-blur-lg">
-              <p className="inline-block text-md text-center py-[6px] px-4 mb-1 rounded-full bg-green-300/5 backdrop-blur-lg font-semibold text-green-900">
+            <div className="absolute p-2 flex flex-col items-center rounded-3xl bottom-2 left-2 right-2 bg-linear-to-r from-white/80 to-white/20 backdrop-blur-lg">
+              <p className="inline-block text-md text-center py-1.5 px-4 mb-1 rounded-full bg-green-300/5 backdrop-blur-lg font-semibold text-green-900">
                 {member.name}
               </p>
               <p className="text-gray-700 capitalize">{member.position}</p>

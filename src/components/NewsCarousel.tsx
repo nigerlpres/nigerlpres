@@ -48,7 +48,7 @@ const NewsCarousel = () => {
     <div className="relative overflow-hidden">
       <Carousel
         orientation="vertical"
-        className="w-full max-w-[900px] mx-auto "
+        className="w-full max-w-225 mx-auto "
         plugins={[plugin.current]}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}

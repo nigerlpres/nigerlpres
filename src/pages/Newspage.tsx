@@ -48,7 +48,7 @@ const Newspage = () => {
 
   if (isLoading)
     return (
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
+      <div className="max-w-285 mx-auto px-4 py-12">
         <h1 className="text-3xl text-green-900 font-semibold mb-3 lg:text-4xl">
           Latest News from L-PRES
         </h1>
@@ -67,7 +67,7 @@ const Newspage = () => {
 
   if (error) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 pb-28 lg:pb-12 h-64 p-4">
+      <div className="max-w-285 mx-auto px-4 pb-28 lg:pb-12 h-64 p-4">
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
           {error}
         </div>
@@ -77,7 +77,7 @@ const Newspage = () => {
 
   if (news.length === 0) {
     return (
-      <div className="max-w-[1140px] mx-auto px-4 py-12">
+      <div className="max-w-285 mx-auto px-4 py-12">
         <h1 className="text-3xl text-green-900 font-semibold mb-3 lg:text-4xl">
           Latest News from L-PRES
         </h1>
@@ -98,7 +98,7 @@ const Newspage = () => {
   }
 
   return (
-    <div className="max-w-[1140px] mx-auto px-4 py-12">
+    <div className="max-w-285 mx-auto px-4 py-12">
       <h1 className="text-3xl text-green-900 font-semibold mb-3 lg:text-4xl">
         Latest News from L-PRES
       </h1>

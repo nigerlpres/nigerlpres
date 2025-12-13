@@ -1,11 +1,4 @@
-import {
-  GiRooster,
-  GiCow,
-  GiRecycle,
-  GiBee,
-  GiGoat,
-  GiPig,
-} from 'react-icons/gi';
+import { GiBee, GiCow, GiGoat, GiRecycle, GiRooster } from 'react-icons/gi';
 
 const ValueChainsShowcase = () => {
   const valueChains = [
@@ -46,13 +39,7 @@ const ValueChainsShowcase = () => {
         'L-PRES will support smallholder sheep and goat marketing systems, tackle.',
       delay: 150,
     },
-    {
-      name: 'pigs',
-      icon: <GiPig />,
-      description:
-        'The pork value chain will receive dedicated attention, with a focus on optimizing production and addressing key challenges.',
-      delay: 200,
-    },
+
     { type: 'empty', position: 'right', emptyTypeId: 2 },
   ];
 
@@ -82,7 +69,7 @@ const ValueChainsShowcase = () => {
             className={`border-dashed border-2 border-green-700 w-3xl ${
               chain.position === 'left'
                 ? 'justify-self-end mr-10'
-                : 'justify-self-start ml-10'
+                : 'justify-self-start ml-70'
             } h-full rounded-lg hidden lg:block`}
           ></div>
         )

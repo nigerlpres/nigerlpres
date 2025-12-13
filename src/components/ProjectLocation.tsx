@@ -6,7 +6,7 @@ interface Props {
 
 const ProjectLocation = ({ location }: Props) => {
   return (
-    <div className="flex items-center mt-2">
+    <div className="flex items-center">
       <span className="inline-block text-md mr-1 text-green-800">
         <FaLocationDot />
       </span>

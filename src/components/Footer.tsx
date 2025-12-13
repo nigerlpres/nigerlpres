@@ -56,7 +56,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-green-50 rounded-2xl backdrop-blur-md overflow-hidden">
-      <div className="max-w-[1140px] mx-auto">
+      <div className="max-w-285 mx-auto">
         <div className="footer sm:footer-horizontal text-base-content text-sm p-4">
           <nav>
             <h6 className="footer-title">Contact Info</h6>
@@ -167,7 +167,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className="p-4 mt-3">
-          <div className="border-t-1 pt-4 border-gray-400">
+          <div className="border-t pt-4 border-gray-400">
             <p className="text-xs text-gray-700">
               &copy; {date.getFullYear()} Livestock Productivity & Resilience
               Support Project (L-PRES). All rights reserved.
