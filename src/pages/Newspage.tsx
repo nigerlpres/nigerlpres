@@ -53,10 +53,10 @@ const Newspage = () => {
           Latest News from L-PRES
         </h1>
         <p className="text-gray-600">
-          Stay abreast of the Livestock Productivity and Resilience Enhancement
-          Project (L-PRES) through our News and Updates section. Keep informed
-          about the project's latest milestones, achievements, and insights,
-          offering you a deeper understanding of the L-PRES initiative.
+          Stay abreast of the NIGER STATE LIVESTOCK PRODUCTIVITY AND RESILIENCE
+          SUPPORT (L-PRES) PROJECT through our News section. Keep informed about
+          the project's latest milestones, achievements, and insights, offering
+          you a deeper understanding of the L-PRES initiative.
         </p>
 
         <div className="flex justify-center items-center h-64">
@@ -82,10 +82,10 @@ const Newspage = () => {
           Latest News from L-PRES
         </h1>
         <p className="text-gray-600">
-          Stay abreast of the Livestock Productivity and Resilience Enhancement
-          Project (L-PRES) through our News and Updates section. Keep informed
-          about the project's latest milestones, achievements, and insights,
-          offering you a deeper understanding of the L-PRES initiative.
+          Stay abreast of the NIGER STATE LIVESTOCK PRODUCTIVITY AND RESILIENCE
+          SUPPORT (L-PRES) PROJECT through our News section. Keep informed about
+          the project's latest milestones, achievements, and insights, offering
+          you a deeper understanding of the L-PRES initiative.
         </p>
 
         <div className="h-64 rounded-2xl border-dashed border-2 mt-10 text-2xl text-gray-600 flex justify-center items-center border-gray-300">
@@ -103,10 +103,10 @@ const Newspage = () => {
         Latest News from L-PRES
       </h1>
       <p className="text-gray-600">
-        Stay abreast of the Livestock Productivity and Resilience Enhancement
-        Project (L-PRES) through our News and Updates section. Keep informed
-        about the project's latest milestones, achievements, and insights,
-        offering you a deeper understanding of the L-PRES initiative.
+        Stay abreast of the NIGER STATE LIVESTOCK PRODUCTIVITY AND RESILIENCE
+        SUPPORT (L-PRES) PROJECT through our News section. Keep informed about
+        the project's latest milestones, achievements, and insights, offering
+        you a deeper understanding of the L-PRES initiative.
       </p>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mt-10">

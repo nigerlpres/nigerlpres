@@ -26,7 +26,7 @@ const NewsCard = ({ news }: Props) => {
           <TextSummarizer>{news.title}</TextSummarizer>
         </h2>
         <div className="mt-2">
-          <span className="inline-block py-[2px] px-3 mb-2 rounded-sm text-green-950 bg-gray-50 border shadow font-semibold">
+          <span className="inline-block py-0.5 px-3 mb-2 rounded-sm text-green-950 bg-gray-50 border shadow font-semibold">
             {new Date(news.published_at).toLocaleDateString('en-us', {
               month: 'long',
               day: 'numeric',
